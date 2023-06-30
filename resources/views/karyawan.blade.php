@@ -38,6 +38,7 @@
         </div>
 
         <div class="container-fluid mt-5">
+
             <div class="table-responsive">
                 <table class="table">
                     <thead>
@@ -57,27 +58,31 @@
                         <th scope="col">Sikap</th>
                         <th scope="col">Hasil</th>
                     </thead>
-                    <tbody>
-                        @foreach ($data as $key)
-                            <tr>
-                                <td scope="col">{{ $key->no }}</td>
-                                <td scope="col">{{ $key->nama_karyawan }}</td>
-                                <td scope="col">{{ $key->jabatan }}</td>
-                                <td scope="col">{{ $key->sp }}</td>
-                                <td scope="col">{{ $key->status_karyawan }}</td>
-                                <td scope="col">{{ $key->kompetensi }}</td>
-                                <td scope="col">{{ $key->intelektual }}</td>
-                                <td scope="col">{{ $key->ketelitian }}</td>
-                                <td scope="col">{{ $key->komunikasi }}</td>
-                                <td scope="col">{{ $key->loyalitas }}</td>
-                                <td scope="col">{{ $key->kerjasama }}</td>
-                                <td scope="col">{{ $key->disiplin }}</td>
-                                <td scope="col">{{ $key->inisiatif }}</td>
-                                <td scope="col">{{ $key->sikap }}</td>
-                                <td scope="col">{{ $key->hasil }}</th>
-                            </tr>
-                        @endforeach
-                    </tbody>
+                    @if ($parameter == 0)
+                    @else
+                        <tbody>
+                            @foreach ($data as $key)
+                                <tr>
+                                    <td scope="col">{{ $key->no }}</td>
+                                    <td scope="col">{{ $key->nama_karyawan }}</td>
+                                    <td scope="col">{{ $key->jabatan }}</td>
+                                    <td scope="col">{{ $key->sp }}</td>
+                                    <td scope="col">{{ $key->status_karyawan }}</td>
+                                    <td scope="col">{{ $key->kompetensi }}</td>
+                                    <td scope="col">{{ $key->intelektual }}</td>
+                                    <td scope="col">{{ $key->ketelitian }}</td>
+                                    <td scope="col">{{ $key->komunikasi }}</td>
+                                    <td scope="col">{{ $key->loyalitas }}</td>
+                                    <td scope="col">{{ $key->kerjasama }}</td>
+                                    <td scope="col">{{ $key->disiplin }}</td>
+                                    <td scope="col">{{ $key->inisiatif }}</td>
+                                    <td scope="col">{{ $key->sikap }}</td>
+                                    <td scope="col">{{ $key->hasil }}</th>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    @endif
+
                 </table>
             </div>
 

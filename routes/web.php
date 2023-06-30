@@ -29,3 +29,4 @@ Route::get('/karyawan', [EmployeeController::class, 'indexKaryawan'])->middlewar
 Route::post('/uplodfile', [EmployeeController::class, 'uplodFile'])->middleware('auth');
 Route::get('/count', [EmployeeController::class, 'count'])->middleware('auth');
 Route::get('/form', [EmployeeController::class, 'indexForm'])->middleware('auth');
+Route::post('/uplodform', [EmployeeController::class, 'uploadForm'])->middleware('auth');
