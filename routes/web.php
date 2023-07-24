@@ -25,8 +25,17 @@ Route::get('forgot-password', [AuthController::class, 'showLinkRequestForm'])->n
 Route::post('forgot-password', [AuthController::class, 'sendResetLink'])->name('password.update');
 
 Route::get('/', [EmployeeController::class, 'index'])->middleware('auth');
-Route::get('/karyawan', [EmployeeController::class, 'indexKaryawan'])->middleware('auth');
+Route::get('/karyawan', [EmployeeController::class, 'indexKaryawan'])->name('indexKaryawan')->middleware('auth');
+Route::get('/evaluasi', [EmployeeController::class, 'indexEvaluasi'])->name('indexEvaluasi')->middleware('auth');
 Route::post('/uplodfile', [EmployeeController::class, 'uplodFile'])->middleware('auth');
 Route::get('/count', [EmployeeController::class, 'count'])->middleware('auth');
 Route::get('/form', [EmployeeController::class, 'indexForm'])->middleware('auth');
 Route::post('/uplodform', [EmployeeController::class, 'uploadForm'])->middleware('auth');
+
+Route::get('/datakaryawan', [EmployeeController::class, 'dtKaryawan'])->name('dataKaryawan');
+Route::get('/datauji', [EmployeeController::class, 'dtUji'])->name('dataUji');
+Route::get('/dataHasiluji', [EmployeeController::class, 'dtHasilUji'])->name('dataHasilUji');
+Route::post('/settingDataUji', [EmployeeController::class, 'submitDataUji'])->name('submitDataUji');
+Route::post('/settingDataLatih', [EmployeeController::class, 'submitDataLatih'])->name('submitDataLatih');
+Route::post('/formatKaryawan', [EmployeeController::class, 'formatKaryawan'])->name('formatKaryawan');
+Route::get('/hitungUji', [EmployeeController::class, 'hitungUji'])->name('hitungUji');

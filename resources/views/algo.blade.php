@@ -11,8 +11,10 @@
                 </div>
             </div>
         </div>
-
-
+        <div class="container-fluid">
+            <p> Perhitungan Node dan percarian Pohon Keputusan Ini dihitung berdasarkan jumlah Data Latih yang sudah
+                ditentukan, dengan total data latih sebanyak {{ $data->count() }} Data</p>
+        </div>
 
         <div class="container-fluid mt-5">
             <h3>Perhitungan Node 1 </h3>

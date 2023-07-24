@@ -67,8 +67,8 @@
                                 aria-label="Floating label select example" id="kompetensi" name="kompetensi">
                                 <option selected> </option>
                                 <option value="A">A</option>
-                                <option value="SP 1">B</option>
-                                <option value="SP 2">C</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
                             </select>
                         </div>
                     </div>
@@ -79,8 +79,8 @@
                                 aria-label="Floating label select example" id="intelektual" name="intelektual">
                                 <option selected> </option>
                                 <option value="A">A</option>
-                                <option value="SP 1">B</option>
-                                <option value="SP 2">C</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
                             </select>
                         </div>
                     </div>
@@ -93,8 +93,8 @@
                                 aria-label="Floating label select example" id="ketelitian" name="ketelitian">
                                 <option selected> </option>
                                 <option value="A">A</option>
-                                <option value="SP 1">B</option>
-                                <option value="SP 2">C</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
                             </select>
                         </div>
                     </div>
@@ -105,8 +105,8 @@
                                 aria-label="Floating label select example" id="komunikasi" name="komunikasi">
                                 <option selected> </option>
                                 <option value="A">A</option>
-                                <option value="SP 1">B</option>
-                                <option value="SP 2">C</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
                             </select>
                         </div>
                     </div>
@@ -119,8 +119,8 @@
                                 aria-label="Floating label select example" id="loyalitas" name="loyalitas">
                                 <option selected> </option>
                                 <option value="A">A</option>
-                                <option value="SP 1">B</option>
-                                <option value="SP 2">C</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
                             </select>
                         </div>
                     </div>
@@ -131,8 +131,8 @@
                                 aria-label="Floating label select example" id="kerjasama" name="kerjasama">
                                 <option selected> </option>
                                 <option value="A">A</option>
-                                <option value="SP 1">B</option>
-                                <option value="SP 2">C</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
                             </select>
                         </div>
                     </div>
@@ -145,8 +145,8 @@
                                 aria-label="Floating label select example" id="inisiatif" name="inisiatif">
                                 <option selected> </option>
                                 <option value="A">A</option>
-                                <option value="SP 1">B</option>
-                                <option value="SP 2">C</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
                             </select>
                         </div>
                     </div>
@@ -157,8 +157,8 @@
                                 aria-label="Floating label select example" id="disiplin" name="disiplin">
                                 <option selected> </option>
                                 <option value="A">A</option>
-                                <option value="SP 1">B</option>
-                                <option value="SP 2">C</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
                             </select>
                         </div>
                     </div>
@@ -171,8 +171,8 @@
                                 aria-label="Floating label select example" id="sikap" name="sikap">
                                 <option selected> </option>
                                 <option value="A">A</option>
-                                <option value="SP 1">B</option>
-                                <option value="SP 2">C</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
                             </select>
                         </div>
                     </div>
@@ -204,30 +204,30 @@
                         <th scope="col">Sikap</th>
                         <th scope="col">Hasil</th>
                     </thead>
-                    {{-- @if ($parameter == 0) --}}
-                    {{-- @else --}}
-                    <tbody>
-                        {{-- @foreach ($data as $key) --}}
-                        <tr>
-                            <td scope="col">{{ $data->no }}</td>
-                            <td scope="col">{{ $data->nama_karyawan }}</td>
-                            <td scope="col">{{ $data->jabatan }}</td>
-                            <td scope="col">{{ $data->sp }}</td>
-                            <td scope="col">{{ $data->status_karyawan }}</td>
-                            <td scope="col">{{ $data->kompetensi }}</td>
-                            <td scope="col">{{ $data->intelektual }}</td>
-                            <td scope="col">{{ $data->ketelitian }}</td>
-                            <td scope="col">{{ $data->komunikasi }}</td>
-                            <td scope="col">{{ $data->loyalitas }}</td>
-                            <td scope="col">{{ $data->kerjasama }}</td>
-                            <td scope="col">{{ $data->disiplin }}</td>
-                            <td scope="col">{{ $data->inisiatif }}</td>
-                            <td scope="col">{{ $data->sikap }}</td>
-                            <td scope="col">{{ $data->hasil }}</th>
-                        </tr>
-                        {{-- @endforeach --}}
-                    </tbody>
-                    {{-- @endif --}}
+                    @if ($data == null)
+                    @else
+                        <tbody>
+                            {{-- @foreach ($data as $key) --}}
+                            <tr>
+                                <td scope="col">{{ $data->no }}</td>
+                                <td scope="col">{{ $data->nama_karyawan }}</td>
+                                <td scope="col">{{ $data->jabatan }}</td>
+                                <td scope="col">{{ $data->sp }}</td>
+                                <td scope="col">{{ $data->status_karyawan }}</td>
+                                <td scope="col">{{ $data->kompetensi }}</td>
+                                <td scope="col">{{ $data->intelektual }}</td>
+                                <td scope="col">{{ $data->ketelitian }}</td>
+                                <td scope="col">{{ $data->komunikasi }}</td>
+                                <td scope="col">{{ $data->loyalitas }}</td>
+                                <td scope="col">{{ $data->kerjasama }}</td>
+                                <td scope="col">{{ $data->disiplin }}</td>
+                                <td scope="col">{{ $data->inisiatif }}</td>
+                                <td scope="col">{{ $data->sikap }}</td>
+                                <td scope="col">{{ $data->hasil }}</th>
+                            </tr>
+                            {{-- @endforeach --}}
+                        </tbody>
+                    @endif
 
                 </table>
             </div>

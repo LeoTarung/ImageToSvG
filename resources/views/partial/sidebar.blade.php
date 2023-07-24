@@ -17,6 +17,9 @@
             <li>
                 <a href="/count"><span class="fa fa-gears mr-3"></span>Perhitungan Algo C5.0</a>
             </li>
+            {{-- <li>
+                <a href="/evaluasi"><span class="fa fa-gears mr-3"></span>Uji Evaluasi</a>
+            </li> --}}
             <li>
                 <a href="/form"><span class="fa fa-users mr-3"></span>Form Karyawan</a>
             </li>
