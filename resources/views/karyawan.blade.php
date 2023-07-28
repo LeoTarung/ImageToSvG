@@ -18,9 +18,9 @@
                     <div class="col-3 border-right text-center" onclick="menu(1)">
                         <h5>Upload Data Karyawan</h5>
                     </div>
-                    <div class="col-3 text-center  border-right" onclick="menu(2)">
+                    {{-- <div class="col-3 text-center  border-right" onclick="menu(2)">
                         <h5>Informasi Umum </h5>
-                    </div>
+                    </div> --}}
                     <div class="col-3 text-center" onclick="menu(3)">
                         <h5>Pengaturan</h5>
                     </div>
@@ -45,12 +45,7 @@
             </div>
             <div id="infoData">
                 <div class="row m-3">
-                    <div class="col-4">
-                        <div class="input-group  mb-3">
-                            <span class="input-group-text">Jumlah Data</span>
-                            <input type="text" class="form-control" value="{{ $data->count() }}" readonly>
-                        </div>
-                    </div>
+
                     <div class="col-4">
                         <form action="/settingDataLatih" method="post">
                             @csrf
@@ -76,10 +71,19 @@
             </div>
             <div id="pengaturan">
                 <div class="row m-2">
-                    <form action="/formatKaryawan" method="post">
-                        @csrf
-                        <button class="btn btn-danger"> Format Data Karyawan</button>
-                    </form>
+                    <div class="col-4">
+                        <div class="input-group  mb-3">
+                            <span class="input-group-text">Jumlah Data</span>
+                            <input type="text" class="form-control" value="{{ $data->count() }}" readonly>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <form action="/formatKaryawan" method="post">
+                            @csrf
+                            <button class="btn btn-danger"> Format Data Karyawan</button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
             <div class="container-fluid mt-5">
@@ -136,7 +140,7 @@
     </div>
     <script>
         let uplodData = document.getElementById('uplodData');
-        let infoData = document.getElementById('infoData');
+        // let infoData = document.getElementById('infoData');
         let pengaturan = document.getElementById('pengaturan');
         infoData.hidden = true;
         pengaturan.hidden = true;
@@ -145,19 +149,19 @@
             if (id == 1) {
                 console.log('1');
                 uplodData.hidden = false;
-                infoData.hidden = true;
+                // infoData.hidden = true;
                 pengaturan.hidden = true;
 
             } else if (id == 2) {
                 console.log('2');
                 uplodData.hidden = true;
-                infoData.hidden = false;
+                // infoData.hidden = false;
                 pengaturan.hidden = true;
 
             } else if (id == 3) {
                 console.log('3');
                 uplodData.hidden = true;
-                infoData.hidden = true;
+                // infoData.hidden = true;
                 pengaturan.hidden = false;
             }
         }

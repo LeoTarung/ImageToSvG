@@ -20,8 +20,12 @@
             {{-- <li>
                 <a href="/evaluasi"><span class="fa fa-gears mr-3"></span>Uji Evaluasi</a>
             </li> --}}
-            <li>
+            {{-- <li>
                 <a href="/form"><span class="fa fa-users mr-3"></span>Form Karyawan</a>
+            </li> --}}
+
+            <li>
+                <a href="/karyawanTeladan"><span class="fa fa-users mr-3"></span>Karyawan Teladan</a>
             </li>
 
         </ul>
